@@ -3,9 +3,7 @@ body {
  }
 
 
-#title {
-    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
-}
+#title {}
 
 
 #wrapper {
@@ -14,7 +12,6 @@ body {
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    font-family: font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
 }
 
 #wrapper.toggled {
@@ -104,10 +101,42 @@ body {
     width: 15px;
 }
 
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+
+
+/* Homepage Styles */
+
 #date {
     font-size: 16px;
     float: right;
-    padding-right: 20px;
+    padding-right: 30px;
 }
 
 
@@ -138,30 +167,67 @@ body {
     width: 450px;
 }
 
-@media(min-width:768px) {
-    #wrapper {
-        padding-left: 250px;
-    }
+/* What did you do today? Styles */
 
-    #wrapper.toggled {
-        padding-left: 0;
-    }
-
-    #sidebar-wrapper {
-        width: 250px;
-    }
-
-    #wrapper.toggled #sidebar-wrapper {
-        width: 0;
-    }
-
-    #page-content-wrapper {
-        padding: 20px;
-        position: relative;
-    }
-
-    #wrapper.toggled #page-content-wrapper {
-        position: relative;
-        margin-right: 0;
-    }
+.activity-item {
+    height: 60px;
+    width: 60px;
+    float: right;
+    margin-right: 10px;
 }
+
+.activity-button {
+    height: 70px;
+    width: 600px;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+.activity-title {
+    float: left;
+    padding-left: 5px;
+    font-size: 18px;
+}
+
+
+.checkbox {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 5px;
+}
+
+#page-bottom-buttons {
+    font-size: 16px;
+    float: right;
+    padding-right: 30px;
+}
+
+#bottom-button-back {
+    height: 40px;
+    width: 80px;
+    border-radius: 15px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+#bottom-button-back:hover {
+    color: #fff;
+    background: #D3D3D3;
+}
+
+#bottom-button-continue {
+    height: 40px;
+    width: 100px;
+    border-radius: 15px;
+    font-size: 12px;
+    margin-bottom: 10px;
+    background-color: rgb(60,179,113);
+}
+
+#bottom-button-continue:hover {
+    color: #fff;
+    background: rgb(34,139,34);
+}
+
+
+
